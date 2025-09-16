@@ -42,7 +42,7 @@
       .glass { backdrop-filter: saturate(140%) blur(10px); }
 
       /* ===== Avata stage sizing & vertical centering ===== */
-      :root { --avataH: clamp(28rem, 50vw, 40rem); }
+      :root { --avataH: clamp(14rem, 25vw, 20rem); }
       .avata-stage { min-height: var(--avataH); }
       .avata-circle { width: var(--avataH); height: var(--avataH); }
       .avata-side { min-height: var(--avataH); display: flex; align-items: center; }
@@ -53,7 +53,7 @@
         margin-left: -2.5rem; /* overlap */
         transition: transform .28s ease, opacity .28s ease, filter .28s ease, box-shadow .28s ease;
         display: flex; flex-direction: column; justify-content: center; /* center content vertically */
-        height:16rem; /* SAME height for all 6 cards */
+        height:18rem; /* SAME height for all 6 cards */
       }
       .stack-line .stack-card:first-child { margin-left: 0; }
       .stack-card.d1 { z-index: 10; transform: translateY(8px) scale(.98); filter: blur(.25px); opacity: .92; }
@@ -140,7 +140,7 @@
 
           <!-- LEFT STACK (01 deepest ← 03 front near circle) -->
           <div class="avata-side hidden lg:flex items-center justify-end stack-line">
-            <article class="stack-card d1 w-36 sm:w-40 h-64 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
+            <article class="stack-card d1 w-36 sm:w-40 h-72 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">01</span>
                 <span class="uppercase">Advanced Obstacle Avoidance</span>
@@ -148,7 +148,7 @@
               <h4 class="mt-2 font-medium">Fly safely with smart sensors</h4>
               <p class="mt-1 text-sm text-slate-600">Onboard sensing helps detect nearby objects for safer paths through doors and tight corners.</p>
             </article>
-            <article class="stack-card d2 w-36 sm:w-40 h-64 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
+            <article class="stack-card d2 w-36 sm:w-40 h-72 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
                 <span class="uppercase">Precision Control</span>
@@ -156,7 +156,7 @@
               <h4 class="mt-2 font-medium">Agile motion in tight spaces</h4>
               <p class="mt-1 text-sm text-slate-600">Confident moves around furniture for elegant reveals and transitions.</p>
             </article>
-            <article class="stack-card d3 w-36 sm:w-40 h-64 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
+            <article class="stack-card d3 w-36 sm:w-40 h-72 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
                 <span class="uppercase">Advanced Stabilization</span>
@@ -181,7 +181,7 @@
 
           <!-- RIGHT STACK (02 front near circle → 04 deepest) -->
           <div class="avata-side hidden lg:flex items-center justify-start stack-line">
-            <article class="stack-card d3 w-36 sm:w-40 h-64 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
+            <article class="stack-card d3 w-36 sm:w-40 h-72 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
                 <span class="uppercase">Intelligent Flight Modes</span>
@@ -189,7 +189,7 @@
               <h4 class="mt-2 font-medium">Follow, Waypoints, and more</h4>
               <p class="mt-1 text-sm text-slate-600">Automated aids that keep moves smooth and repeatable.</p>
             </article>
-            <article class="stack-card d2 w-36 sm:w-40 h-64 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
+            <article class="stack-card d2 w-36 sm:w-40 h-72 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
                 <span class="uppercase">4K Recording</span>
@@ -197,7 +197,7 @@
               <h4 class="mt-2 font-medium">High‑detail image</h4>
               <p class="mt-1 text-sm text-slate-600">Sharp picture and consistent color for YouTube, MLS and ads.</p>
             </article>
-            <article class="stack-card d1 w-36 sm:w-40 h-64 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
+            <article class="stack-card d1 w-36 sm:w-40 h-72 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span>
                 <span class="uppercase">Extended Flight Time</span>
