@@ -46,6 +46,11 @@
       .avata-card:hover .overlay, .avata-card[aria-expanded="true"] .overlay { opacity: 1; transform: translateY(0); }
       .stack-layer { transition: transform .35s ease, opacity .35s ease, filter .35s ease; }
       .stack-layer:hover { filter: none; opacity: 1; transform: translateX(0) translateY(0) scale(1); }
+      /* NEW: compact overlapped lines */
+      .stack-line { gap: 0; }
+      .stack-line .stack-card { margin-left: -1.25rem; /* overlap */ filter: blur(.2px); opacity: .9; transition: transform .28s ease, opacity .28s ease, filter .28s ease, box-shadow .28s ease; }
+      .stack-line .stack-card:first-child { margin-left: 0; }
+      .stack-line .stack-card:hover { transform: translateY(-4px) scale(1.02); filter: none; opacity: 1; z-index: 20; box-shadow: 0 12px 32px rgba(2,6,23,.12); }
     </style>
   </head>
   <body class="bg-obsidian text-ink font-sans antialiased">
@@ -124,9 +129,9 @@
         <!-- Layout EXACT style: center circle + side stacks -->
         <div class="grid items-center gap-8 lg:grid-cols-3 xl:grid-cols-[1.4fr_1fr_1.4fr]">
           <!-- LEFT STACK -->
-          <div class="hidden lg:flex items-center justify-end gap-4">
+          <div class="hidden lg:flex items-center justify-end stack-line">
             <!-- Card 01 -->
-            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+            <div class="avata-card stack-card w-56 sm:w-60 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
               <div class="relative z-[1]">
                 <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">01</span>
@@ -140,7 +145,7 @@
               </div>
             </div>
             <!-- Card 02 -->
-            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+            <div class="avata-card stack-card w-56 sm:w-60 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
               <div class="relative z-[1]">
                 <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
@@ -153,8 +158,8 @@
                 <p class="mt-2 text-sm text-slate-600">Smooth, confident moves through doorways and around furniture for elegant reveals and transitions.</p>
               </div>
             </div>
-            <!-- Card 03 (hidden on smaller desktops to keep balance) -->
-            <div class="avata-card w-56 sm:w-60 hidden xl:block rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+            <!-- Card 03 -->
+            <div class="avata-card stack-card w-56 sm:w-60 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer hidden xl:block" aria-expanded="false">
               <div class="relative z-[1]">
                 <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
@@ -168,13 +173,13 @@
               </div>
             </div>
           </div>
-          
+
           <!-- CENTER CIRCLE -->
           <div class="relative mx-auto w-full max-w-xl">
             <div class="relative aspect-square rounded-full bg-white ring-1 ring-black/5 shadow-xl flex items-center justify-center overflow-hidden">
               <div class="absolute inset-0 rounded-full border border-slate-200"></div>
               <div class="absolute inset-6 rounded-full border border-slate-100"></div>
-              <img src="assets/dji-avata-center.png" alt="DJI Avata FPV drone" class="relative z-[1] w-4/5 max-w-md drop-shadow-xl pointer-events-none select-none" />
+              <img src="https://se-cdn.djiits.com/tpc/uploads/spu/cover/daf2c8fd679eb886c0ba45a1d015a5fc@xlarge.png" alt="DJI Avata FPV drone" class="relative z-[1] w-4/5 max-w-md drop-shadow-xl pointer-events-none select-none" />
             </div>
             <div class="mt-6 text-center">
               <h3 class="text-xl font-semibold">4K Ultra‑HD Camera</h3>
@@ -183,9 +188,9 @@
           </div>
 
           <!-- RIGHT STACK -->
-          <div class="hidden lg:flex items-center justify-start gap-4">
+          <div class="hidden lg:flex items-center justify-start stack-line">
             <!-- Card 01 -->
-            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+            <div class="avata-card stack-card w-56 sm:w-60 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
               <div class="relative z-[1]">
                 <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
@@ -199,7 +204,7 @@
               </div>
             </div>
             <!-- Card 02 -->
-            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+            <div class="avata-card stack-card w-56 sm:w-60 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
               <div class="relative z-[1]">
                 <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
@@ -212,8 +217,8 @@
                 <p class="mt-2 text-sm text-slate-600">Sharp 4K picture and consistent color for YouTube, MLS and paid media.</p>
               </div>
             </div>
-            <!-- Card 03 (hidden on smaller desktops) -->
-            <div class="avata-card w-56 sm:w-60 hidden xl:block rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+            <!-- Card 03 -->
+            <div class="avata-card stack-card w-56 sm:w-60 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer hidden xl:block" aria-expanded="false">
               <div class="relative z-[1]">
                 <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span>
