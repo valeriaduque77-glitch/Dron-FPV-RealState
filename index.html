@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cinematic Realty Media — Real Estate FPV & Media</title>
+    <meta name="description" content="FPV cinematic real estate tours, aerials, photos, reels, and 3D for agents and developers. Fast delivery, professional editing, multi‑city coverage." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              obsidian: '#0f1117',
+              surface: '#171b22',
+              ink: '#e9eef5',
+              accent: {
+                DEFAULT: '#22e3ac',
+                soft: '#22e3ac1a'
+              }
+            },
+            boxShadow: {
+              soft: '0 10px 30px rgba(0,0,0,.35)'
+            },
+            fontFamily: {
+              display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+              sans: ['Inter', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html, body { height: 100%; }
+      .glass { backdrop-filter: saturate(140%) blur(10px); }
+    </style>
+  </head>
+  <body class="bg-obsidian text-ink font-sans antialiased">
+    <!-- NAV -->
+    <header class="fixed inset-x-0 top-0 z-50">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mt-5 mb-3 rounded-2xl glass bg-white/5 ring-1 ring-white/10">
+          <div class="flex items-center justify-between px-4 py-3">
+            <a href="#home" class="flex items-center gap-2">
+              <div class="h-8 w-8 rounded-lg bg-accent/20 ring-1 ring-accent"></div>
+              <span class="font-display text-lg tracking-tight">Cinematic Realty Media</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+              <a href="#work" class="hover:text-white">Portfolio</a>
+              <a href="#services" class="hover:text-white">Services</a>
+              <a href="#pricing" class="hover:text-white">Pricing</a>
+              <a href="#faq" class="hover:text-white">FAQ</a>
+              <a href="#about" class="hover:text-white">About</a>
+              <a href="#book" class="ml-2 inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 font-medium text-black hover:shadow-soft">Book a flight</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg ring-1 ring-white/20" aria-label="Open menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-white/80"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div id="mobileMenu" class="hidden border-t border-white/10 px-4 py-3 md:hidden">
+            <div class="grid gap-3 text-sm text-white/80">
+              <a href="#work" class="hover:text-white">Portfolio</a>
+              <a href="#services" class="hover:text-white">Services</a>
+              <a href="#pricing" class="hover:text-white">Pricing</a>
+              <a href="#faq" class="hover:text-white">FAQ</a>
+              <a href="#about" class="hover:text-white">About</a>
+              <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 font-medium text-black">Book a flight</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="relative isolate overflow-hidden pt-36">
+      <!-- Background video placeholder -->
+      <div class="absolute inset-0 -z-10">
+        <video class="h-full w-full object-cover" autoplay muted loop playsinline poster="" src="assets/hero.mp4"></video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-obsidian/70 to-obsidian"></div>
+      </div>
+      <div class="mx-auto max-w-7xl px-5 py-24">
+        <div class="max-w-3xl">
+          <h1 class="font-display text-5xl md:text-6xl font-semibold leading-tight tracking-tight">Real estate videos that sell the experience.</h1>
+          <p class="mt-5 text-lg text-white/80">FPV cinematic walkthroughs inside and out, aerials, photos, reels, and 3D — professionally edited and delivered in 48–72 hours.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 font-semibold text-black hover:shadow-soft">View portfolio</a>
+            <a href="#pricing" class="inline-flex items-center justify-center rounded-xl bg-white/10 px-6 py-3 font-medium text-white hover:bg-white/15">See pricing</a>
+          </div>
+          <div class="mt-10 grid grid-cols-2 gap-4 text-sm text-white/70 md:grid-cols-4">
+            <div class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Delivery 48–72h</div>
+            <div class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Licensed pilots</div>
+            <div class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Insured</div>
+            <div class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Multi‑city coverage</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Services</h2>
+            <p class="mt-2 max-w-2xl text-white/70">Everything an agent needs: a single FPV take that showcases flow, crisp HDR photos, aerial establishing shots, short‑form reels, and optional 3D tours.</p>
+          </div>
+          <a href="#pricing" class="hidden md:inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15">Pricing details</a>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card -->
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">FPV Tour In/Out</h3>
+            <p class="mt-2 text-white/70">Continuous cinematic walkthrough (2–3 min) capturing exterior and interior in one flowing story.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Aerial & Static Shots</h3>
+            <p class="mt-2 text-white/70">Elevated establishing shots, neighborhood context and classic locked shots for balance.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Professional Photo Set</h3>
+            <p class="mt-2 text-white/70">20–30 HDR photos, interior/exterior plus aerial stills — ready for MLS and brochures.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Social Media Reels</h3>
+            <p class="mt-2 text-white/70">30–60s vertical edits with hooks, captions and brand elements for Reels/TikTok/Shorts.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">3D Virtual Tour</h3>
+            <p class="mt-2 text-white/70">Interactive walkthrough (Matterport‑style) to deepen engagement and time‑on‑page.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Editing & Sound Design</h3>
+            <p class="mt-2 text-white/70">Color, rhythm, licensed music, tasteful motion graphics and agent branding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="work" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-8 flex items-end justify-between gap-6">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Portfolio</h2>
+            <p class="mt-2 max-w-2xl text-white/70">Selected projects — tap to view. Replace thumbnails and links with your own video URLs.</p>
+          </div>
+          <a href="#book" class="hidden md:inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 font-semibold text-black">Book a flight</a>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- 6 placeholders -->
+          <a class="group relative aspect-video overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10" href="#book">
+            <div class="absolute inset-0 flex items-center justify-center text-white/60">Video Placeholder</div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 transition group-hover:opacity-100"></div>
+            <span class="absolute bottom-3 left-3 rounded-lg bg-white/10 px-2 py-1 text-xs text-white/90 ring-1 ring-white/15">Residential</span>
+          </a>
+          <a class="group relative aspect-video overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10" href="#book"><div class="absolute inset-0 flex items-center justify-center text-white/60">Video Placeholder</div></a>
+          <a class="group relative aspect-video overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10" href="#book"><div class="absolute inset-0 flex items-center justify-center text-white/60">Video Placeholder</div></a>
+          <a class="group relative aspect-video overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10" href="#book"><div class="absolute inset-0 flex items-center justify-center text-white/60">Video Placeholder</div></a>
+          <a class="group relative aspect-video overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10" href="#book"><div class="absolute inset-0 flex items-center justify-center text-white/60">Video Placeholder</div></a>
+          <a class="group relative aspect-video overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10" href="#book"><div class="absolute inset-0 flex items-center justify-center text-white/60">Video Placeholder</div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-10">
+          <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">How it works</h2>
+          <p class="mt-2 max-w-2xl text-white/70">A simple four‑step workflow that respects timelines and brand consistency.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-4">
+          <div class="rounded-2xl bg-surface p-6 ring-1 ring-white/5"><div class="text-accent text-sm font-semibold">01</div><h3 class="mt-2 font-medium">Brief</h3><p class="mt-2 text-white/70">Share the listing, goals and brand elements. We confirm flight plan and schedule.</p></div>
+          <div class="rounded-2xl bg-surface p-6 ring-1 ring-white/5"><div class="text-accent text-sm font-semibold">02</div><h3 class="mt-2 font-medium">Prep</h3><p class="mt-2 text-white/70">Location prep checklist, safety and permits. We align on key highlights.</p></div>
+          <div class="rounded-2xl bg-surface p-6 ring-1 ring-white/5"><div class="text-accent text-sm font-semibold">03</div><h3 class="mt-2 font-medium">Shoot</h3><p class="mt-2 text-white/70">FPV in/out, aerials and stills. Efficient on‑site coordination with agents.</p></div>
+          <div class="rounded-2xl bg-surface p-6 ring-1 ring-white/5"><div class="text-accent text-sm font-semibold">04</div><h3 class="mt-2 font-medium">Deliver</h3><p class="mt-2 text-white/70">Edit and color in 48–72 hours. Exports for YouTube, MLS and social.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING (summary) -->
+    <section id="pricing" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Pricing</h2>
+            <p class="mt-2 text-white/70">Minimum order: 3 properties. Full pricing details below. </p>
+          </div>
+          <a href="#book" class="hidden md:inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 font-semibold text-black">Request a quote</a>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Base -->
+          <div class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Base Package — FPV YouTube Tour</h3>
+            <ul class="mt-3 text-white/70 space-y-1 text-sm">
+              <li>4K FPV walkthrough (2–3 min)</li>
+              <li>Professional edit, music licensed, branding</li>
+              <li>Delivery 48–72 hours</li>
+            </ul>
+            <div class="mt-5 grid gap-2 text-sm">
+              <div class="flex items-center justify-between text-white/80"><span>3–5 properties</span><strong>$250</strong></div>
+              <div class="flex items-center justify-between text-white/80"><span>5–10 properties</span><strong>$225</strong></div>
+              <div class="flex items-center justify-between text-white/80"><span>10–15 properties</span><strong>$200</strong></div>
+              <div class="flex items-center justify-between text-white/80"><span>15+ properties</span><strong>$175</strong></div>
+            </div>
+          </div>
+
+          <!-- Suggested bundle -->
+          <div class="rounded-2xl bg-accent/10 p-6 ring-1 ring-accent/40">
+            <div class="text-accent text-xs font-semibold uppercase tracking-wide">Suggested bundle</div>
+            <h3 class="mt-1 font-medium text-lg">FPV + Photos</h3>
+            <p class="mt-2 text-white/70">Everything agents need for MLS and social while keeping budgets tight.</p>
+            <ul class="mt-3 text-white/70 space-y-1 text-sm">
+              <li>4K FPV walkthrough</li>
+              <li>20–30 HDR photos (interior/exterior + aerial)</li>
+              <li>Professional edit, ready to publish</li>
+            </ul>
+            <p class="mt-3 text-sm text-white/80">Typical range: <strong>$350–$400</strong> per property depending on portfolio size.</p>
+          </div>
+
+          <!-- Upgrades -->
+          <div class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Upgrade options (per property)</h3>
+            <ul class="mt-3 text-white/80 space-y-2 text-sm">
+              <li class="flex items-center justify-between"><span>Social Media Highlight (30–60s vertical)</span><strong>$75</strong></li>
+              <li class="flex items-center justify-between"><span>Professional Photo Set (20–30 HDR)</span><strong>$150</strong></li>
+              <li class="flex items-center justify-between"><span>3D Virtual Tour (interactive)</span><strong>$150</strong></li>
+              <li class="flex items-center justify-between"><span>Neighborhood / Lifestyle B‑Roll</span><strong>$75</strong></li>
+              <li class="flex items-center justify-between"><span>Extra Social Highlight (alternate edit)</span><strong>$50</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#full-pricing" class="inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15">View example package pricing</a>
+          <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-black">Get a quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL PRICING TABLE (collapsible) -->
+    <section id="full-pricing" class="py-2">
+      <div class="mx-auto max-w-7xl px-5">
+        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 open:bg-white/5">
+          <summary class="cursor-pointer list-none">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-medium">Example Package Pricing (per property)</h3>
+              <span class="text-sm text-white/60 group-open:hidden">Expand</span>
+              <span class="hidden text-sm text-white/60 group-open:inline">Collapse</span>
+            </div>
+          </summary>
+          <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4 text-sm text-white/80">
+            <div class="rounded-xl bg-surface p-5 ring-1 ring-white/5"><div class="font-medium">FPV YouTube Tour Only</div><p class="mt-2">3–5: $250 · 5–10: $225 · 10–15: $200 · 15+: $175</p></div>
+            <div class="rounded-xl bg-surface p-5 ring-1 ring-white/5"><div class="font-medium">FPV + Social Media</div><p class="mt-2">3–5: $325 · 5–10: $300 · 10–15: $275 · 15+: $225</p></div>
+            <div class="rounded-xl bg-surface p-5 ring-1 ring-white/5"><div class="font-medium">FPV + Photos</div><p class="mt-2">3–5: $400 · 5–10: $375 · 10–15: $350 · 15+: $325</p></div>
+            <div class="rounded-xl bg-surface p-5 ring-1 ring-white/5"><div class="font-medium">Full Package (FPV + Social + Photos + 3D)</div><p class="mt-2">3–5: ~$625 · 5–10: ~$600 · 10–15: ~$575 · 15+: ~$550</p></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Agent feedback</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <figure class="rounded-2xl bg-surface p-6 ring-1 ring-white/5"><blockquote class="text-white/80">“The FPV tour tripled our online engagement and helped us book showings the first weekend.”</blockquote><figcaption class="mt-4 text-sm text-white/60">— Broker, FL</figcaption></figure>
+          <figure class="rounded-2xl bg-surface p-6 ring-1 ring-white/5"><blockquote class="text-white/80">“Fast delivery, consistent color, and edits tailored to our brand. Exactly what we needed.”</blockquote><figcaption class="mt-4 text-sm text-white/60">— Team Lead, NYC</figcaption></figure>
+          <figure class="rounded-2xl bg-surface p-6 ring-1 ring-white/5"><blockquote class="text-white/80">“Photos + FPV is our go‑to bundle. One vendor, one timeline, polished results.”</blockquote><figcaption class="mt-4 text-sm text-white/60">— Agent, TX</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">FAQ</h2>
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <details class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <summary class="cursor-pointer text-white/90 font-medium">What is included in the base FPV tour?</summary>
+            <p class="mt-3 text-white/70">A 2–3 minute 4K cinematic walkthrough covering outside and inside, professional edit with licensed music, agent branding, and exports for YouTube and MLS.</p>
+          </details>
+          <details class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <summary class="cursor-pointer text-white/90 font-medium">How fast is delivery?</summary>
+            <p class="mt-3 text-white/70">Typical turnaround is 48–72 hours after the shoot. Rush options available upon request.</p>
+          </details>
+          <details class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <summary class="cursor-pointer text-white/90 font-medium">Are you insured and licensed?</summary>
+            <p class="mt-3 text-white/70">Yes. We operate with insured, licensed pilots and follow property and airspace regulations.</p>
+          </details>
+          <details class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <summary class="cursor-pointer text-white/90 font-medium">Do you travel?</summary>
+            <p class="mt-3 text-white/70">We serve multiple cities and can coordinate travel once portfolio size is confirmed.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / CTA -->
+    <section id="about" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">About</h2>
+            <p class="mt-3 text-white/80">Cinematic Realty Media produces high‑impact real estate visuals — FPV, aerials, photography and short‑form content — designed for listings, brand storytelling and paid media. Our process emphasizes safety, speed and editorial consistency.</p>
+            <div class="mt-6 flex gap-3">
+              <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-2 font-medium text-white hover:bg-white/15">See work</a>
+              <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 font-semibold text-black">Start a project</a>
+            </div>
+          </div>
+          <div class="aspect-video rounded-2xl bg-white/5 ring-1 ring-white/10"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / BOOK -->
+    <section id="book" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="rounded-2xl bg-surface p-8 ring-1 ring-white/5 md:p-10">
+          <div class="grid gap-8 md:grid-cols-2">
+            <div>
+              <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Book a flight</h2>
+              <p class="mt-2 text-white/80">Tell us about your listings and preferred dates. We’ll confirm availability and send a clear estimate.</p>
+              <ul class="mt-6 space-y-2 text-white/70 text-sm">
+                <li>• Minimum order: 3 properties</li>
+                <li>• Delivery 48–72 hours</li>
+                <li>• Licensed & insured</li>
+              </ul>
+              <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href="mailto:info@cinematicrealtymedia.com" class="inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 font-semibold text-black">Email us</a>
+                <a href="#" class="inline-flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 font-medium text-white hover:bg-white/15">Schedule a call</a>
+              </div>
+            </div>
+            <form class="grid gap-4">
+              <div class="grid gap-2">
+                <label class="text-sm text-white/80">Name</label>
+                <input type="text" class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 outline-none focus:ring-accent/60" placeholder="Your name" required />
+              </div>
+              <div class="grid gap-2">
+                <label class="text-sm text-white/80">Email</label>
+                <input type="email" class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 outline-none focus:ring-accent/60" placeholder="you@company.com" required />
+              </div>
+              <div class="grid gap-2">
+                <label class="text-sm text-white/80">City / Area</label>
+                <input type="text" class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 outline-none focus:ring-accent/60" placeholder="City, State" />
+              </div>
+              <div class="grid gap-2">
+                <label class="text-sm text-white/80">Portfolio size</label>
+                <select class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 outline-none focus:ring-accent/60">
+                  <option>3–5 properties</option>
+                  <option>5–10 properties</option>
+                  <option>10–15 properties</option>
+                  <option>15+ properties</option>
+                </select>
+              </div>
+              <div class="grid gap-2">
+                <label class="text-sm text-white/80">Message</label>
+                <textarea rows="4" class="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 outline-none focus:ring-accent/60" placeholder="Listing links, timeline, add‑ons"></textarea>
+              </div>
+              <button class="mt-2 inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 font-semibold text-black" type="submit">Request quote</button>
+              <p class="text-xs text-white/50">By submitting, you agree to be contacted about your inquiry. We respect your time and inbox.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-5 py-10 text-sm text-white/60">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>&copy; <span id="year"></span> Cinematic Realty Media. All rights reserved.</div>
+          <div class="flex gap-6">
+            <a href="#work" class="hover:text-white">Portfolio</a>
+            <a href="#services" class="hover:text-white">Services</a>
+            <a href="#pricing" class="hover:text-white">Pricing</a>
+            <a href="#book" class="hover:text-white">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      btn && btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
