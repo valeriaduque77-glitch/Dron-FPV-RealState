@@ -122,15 +122,15 @@
         </header>
 
         <!-- Layout EXACT style: center circle + side stacks -->
-        <div class="grid items-center gap-8 lg:grid-cols-3">
+        <div class="grid items-center gap-8 lg:grid-cols-3 xl:grid-cols-[1.4fr_1fr_1.4fr]">
           <!-- LEFT STACK -->
-          <div class="relative hidden lg:block h-[460px]">
-            <!-- Layer 1 (front) -->
-            <div class="stack-layer avata-card absolute left-0 top-0 w-80 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+          <div class="hidden lg:flex items-center justify-end gap-4">
+            <!-- Card 01 -->
+            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
               <div class="relative z-[1]">
-                <div class="flex items-center gap-2 text-slate-400 text-xs">
+                <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">01</span>
-                  <span class="uppercase tracking-wide">Advanced Obstacle Avoidance</span>
+                  <span class="uppercase">Advanced Obstacle Avoidance</span>
                 </div>
                 <h4 class="mt-2 font-medium">Fly safely with smart sensors</h4>
               </div>
@@ -139,24 +139,42 @@
                 <p class="mt-2 text-sm text-slate-600">Onboard sensing helps detect nearby objects, supporting safer flight paths through doors, hallways and tight corners.</p>
               </div>
             </div>
-            <!-- Layer 2 (mid) -->
-            <div class="stack-layer absolute left-6 top-24 w-80 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md opacity-80 blur-[0.3px] scale-[0.98]">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span><span class="uppercase tracking-wide">Precision Control</span></div>
-              <h4 class="mt-2 font-medium text-slate-500">Agile motion in tight spaces</h4>
+            <!-- Card 02 -->
+            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+              <div class="relative z-[1]">
+                <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
+                  <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
+                  <span class="uppercase">Precision Control</span>
+                </div>
+                <h4 class="mt-2 font-medium">Agile motion in tight spaces</h4>
+              </div>
+              <div class="overlay absolute inset-0 rounded-2xl bg-white/95 p-5">
+                <h4 class="font-medium">Precision Control</h4>
+                <p class="mt-2 text-sm text-slate-600">Smooth, confident moves through doorways and around furniture for elegant reveals and transitions.</p>
+              </div>
             </div>
-            <!-- Layer 3 (back) -->
-            <div class="stack-layer absolute left-12 top-44 w-80 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md opacity-60 blur-[0.6px] scale-[0.96]">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span><span class="uppercase tracking-wide">Advanced Stabilization</span></div>
-              <h4 class="mt-2 font-medium text-slate-500">Silky, steady footage</h4>
+            <!-- Card 03 (hidden on smaller desktops to keep balance) -->
+            <div class="avata-card w-56 sm:w-60 hidden xl:block rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+              <div class="relative z-[1]">
+                <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
+                  <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
+                  <span class="uppercase">Advanced Stabilization</span>
+                </div>
+                <h4 class="mt-2 font-medium">Silky, steady footage</h4>
+              </div>
+              <div class="overlay absolute inset-0 rounded-2xl bg-white/95 p-5">
+                <h4 class="font-medium">Advanced Stabilization</h4>
+                <p class="mt-2 text-sm text-slate-600">Cinematic motion with minimal micro‑jitter, giving editors clean material for color and pacing.</p>
+              </div>
             </div>
           </div>
-
+          
           <!-- CENTER CIRCLE -->
           <div class="relative mx-auto w-full max-w-xl">
             <div class="relative aspect-square rounded-full bg-white ring-1 ring-black/5 shadow-xl flex items-center justify-center overflow-hidden">
               <div class="absolute inset-0 rounded-full border border-slate-200"></div>
               <div class="absolute inset-6 rounded-full border border-slate-100"></div>
-              <img src="https://se-cdn.djiits.com/tpc/uploads/spu/cover/daf2c8fd679eb886c0ba45a1d015a5fc@xlarge.png" alt="DJI Avata FPV drone" class="relative z-[1] w-4/5 max-w-md drop-shadow-xl pointer-events-none select-none" />
+              <img src="assets/dji-avata-center.png" alt="DJI Avata FPV drone" class="relative z-[1] w-4/5 max-w-md drop-shadow-xl pointer-events-none select-none" />
             </div>
             <div class="mt-6 text-center">
               <h3 class="text-xl font-semibold">4K Ultra‑HD Camera</h3>
@@ -165,13 +183,13 @@
           </div>
 
           <!-- RIGHT STACK -->
-          <div class="relative hidden lg:block h-[460px]">
-            <!-- Layer 1 (front) -->
-            <div class="stack-layer avata-card absolute right-0 top-0 w-80 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+          <div class="hidden lg:flex items-center justify-start gap-4">
+            <!-- Card 01 -->
+            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
               <div class="relative z-[1]">
-                <div class="flex items-center gap-2 text-slate-400 text-xs">
+                <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                   <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
-                  <span class="uppercase tracking-wide">Intelligent Flight Modes</span>
+                  <span class="uppercase">Intelligent Flight Modes</span>
                 </div>
                 <h4 class="mt-2 font-medium">Follow, Waypoints, and more</h4>
               </div>
@@ -180,20 +198,37 @@
                 <p class="mt-2 text-sm text-slate-600">Follow Me, Waypoints and Gesture Controls streamline operation and help maintain smooth, repeatable moves.</p>
               </div>
             </div>
-            <!-- Layer 2 (mid) -->
-            <div class="stack-layer absolute right-6 top-24 w-80 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md opacity-80 blur-[0.3px] scale-[0.98]">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span><span class="uppercase tracking-wide">4K Recording</span></div>
-              <h4 class="mt-2 font-medium text-slate-500">High‑detail image</h4>
+            <!-- Card 02 -->
+            <div class="avata-card w-56 sm:w-60 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+              <div class="relative z-[1]">
+                <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
+                  <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
+                  <span class="uppercase">4K Recording</span>
+                </div>
+                <h4 class="mt-2 font-medium">High‑detail image</h4>
+              </div>
+              <div class="overlay absolute inset-0 rounded-2xl bg-white/95 p-5">
+                <h4 class="font-medium">4K Recording</h4>
+                <p class="mt-2 text-sm text-slate-600">Sharp 4K picture and consistent color for YouTube, MLS and paid media.</p>
+              </div>
             </div>
-            <!-- Layer 3 (back) -->
-            <div class="stack-layer absolute right-12 top-44 w-80 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md opacity-60 blur-[0.6px] scale-[0.96]">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span><span class="uppercase tracking-wide">Extended Flight Time</span></div>
-              <h4 class="mt-2 font-medium text-slate-500">Up to 20+ minutes</h4>
+            <!-- Card 03 (hidden on smaller desktops) -->
+            <div class="avata-card w-56 sm:w-60 hidden xl:block rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer" aria-expanded="false">
+              <div class="relative z-[1]">
+                <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
+                  <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span>
+                  <span class="uppercase">Extended Flight Time</span>
+                </div>
+                <h4 class="mt-2 font-medium">Up to 20+ minutes</h4>
+              </div>
+              <div class="overlay absolute inset-0 rounded-2xl bg-white/95 p-5">
+                <h4 class="font-medium">Extended Flight Time</h4>
+                <p class="mt-2 text-sm text-slate-600">Enough endurance to capture multiple takes and exterior establishing shots.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- MOBILE: simple list -->
+          <!-- MOBILE: simple list -->
         <div class="mt-10 grid gap-3 lg:hidden">
           <details class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><summary class="cursor-pointer font-medium">Advanced Obstacle Avoidance</summary><p class="mt-2 text-sm text-slate-600">Smart sensing to detect nearby objects for safer indoor flight.</p></details>
           <details class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><summary class="cursor-pointer font-medium">Intelligent Flight Modes</summary><p class="mt-2 text-sm text-slate-600">Follow Me, Waypoints and more for effortless operation.</p></details>
