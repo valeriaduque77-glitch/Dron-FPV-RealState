@@ -109,43 +109,82 @@
     <!-- AVATA (DJI) -->
     <section id="avata" class="relative bg-[#F7F8FA] text-slate-900">
       <div class="mx-auto max-w-7xl px-5 py-20">
-        <div class="grid items-center gap-10 md:grid-cols-2">
-          <div class="order-2 md:order-1">
-            <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">DJI Avata for Real Estate</h2>
-            <p class="mt-3 max-w-xl text-slate-600">Nuestro dron principal para tours FPV en interiores y exteriores. Su formato <em>cinewhoop</em> con protectores de hélice permite vuelos seguros en espacios reducidos y transiciones fluidas que muestran el flujo real de la propiedad.</p>
-            <div class="mt-6 grid gap-3 sm:grid-cols-2">
-              <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm"><h3 class="font-medium">Indoor‑safe cinewhoop</h3><p class="mt-1 text-sm text-slate-600">Ducted prop guards para volar por pasillos, puertas y estancias con seguridad.</p></div>
-              <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm"><h3 class="font-medium">Estabilización avanzada</h3><p class="mt-1 text-sm text-slate-600">Movimiento ultra suave gracias a estabilización electrónica y óptica de última generación.</p></div>
-              <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm"><h3 class="font-medium">4K cinematográfico</h3><p class="mt-1 text-sm text-slate-600">Imagen nítida y color consistente lista para YouTube, MLS y anuncios.</p></div>
-              <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm"><h3 class="font-medium">Ágil y preciso</h3><p class="mt-1 text-sm text-slate-600">Tomas en una sola pasada, reveals dinámicos y transiciones entre niveles.</p></div>
-            </div>
-            <div class="mt-6 flex gap-3">
-              <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Ver demos</a>
-              <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-black">Agendar vuelo</a>
-            </div>
-            <p class="mt-3 text-xs text-slate-500">Coloca tus imágenes en <code>assets/dji-avata-hero.png</code> y <code>assets/dji-avata-detail.png</code> para que se vean en la página.</p>
+        <header class="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">Equipo</p>
+            <h2 class="mt-1 font-display text-3xl md:text-4xl font-semibold tracking-tight">DJI Avata para Real Estate</h2>
+            <p class="mt-3 max-w-2xl text-slate-600">Nuestro dron FPV de formato <em>cinewhoop</em> con protectores de hélice — ideal para vuelos seguros en interiores, transiciones fluidas y una narrativa continua que muestra el flujo real de la propiedad.</p>
           </div>
-          <div class="order-1 md:order-2">
-            <figure class="relative">
-              <img src="assets/dji-avata-hero.png" alt="DJI Avata cinewhoop FPV drone" class="w-full rounded-3xl shadow-2xl" />
-              <figcaption class="sr-only">DJI Avata</figcaption>
-            </figure>
+          <div class="hidden md:flex gap-3">
+            <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Ver demos</a>
+            <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-black">Agendar vuelo</a>
+          </div>
+        </header>
+
+        <!-- Feature layout inspirado en tu referencia: círculo central + tarjetas laterales -->
+        <div class="grid items-center gap-8 lg:grid-cols-3">
+          <!-- Columna izquierda: tarjetas -->
+          <div class="hidden lg:flex flex-col gap-5">
+            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm">
+              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">01</span><span class="uppercase tracking-wide">Safety</span></div>
+              <h3 class="mt-2 font-medium">Cinewhoop seguro en interiores</h3>
+              <p class="mt-1 text-sm text-slate-600">Protectores de hélice para volar por puertas, pasillos y escaleras con confianza.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-90">
+              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span><span class="uppercase tracking-wide">Control</span></div>
+              <h3 class="mt-2 font-medium">Precisión en espacios estrechos</h3>
+              <p class="mt-1 text-sm text-slate-600">Movimientos suaves y reveals dinámicos que cuentan la historia de la casa.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-80">
+              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span><span class="uppercase tracking-wide">Estabilidad</span></div>
+              <h3 class="mt-2 font-medium">Estabilización avanzada</h3>
+              <p class="mt-1 text-sm text-slate-600">Footage sedoso y sin vibraciones, listo para edición profesional.</p>
+            </div>
+          </div>
+
+          <!-- Centro: tarjeta circular -->
+          <div class="relative mx-auto w-full max-w-xl">
+            <div class="relative aspect-square rounded-full bg-white ring-1 ring-black/5 shadow-xl flex items-center justify-center overflow-hidden">
+              <div class="absolute inset-0 rounded-full border border-slate-200"></div>
+              <div class="absolute inset-6 rounded-full border border-slate-100"></div>
+              <img src="assets/dji-avata-center.png" alt="DJI Avata" class="relative z-[1] w-4/5 max-w-md drop-shadow-xl" />
+            </div>
+            <div class="mt-6 text-center">
+              <h3 class="text-xl font-semibold">Cámara 4K Ultra‑HD</h3>
+              <p class="mt-1 text-slate-600">Walkthroughs inmersivos con claridad excepcional y color consistente para YouTube y MLS.</p>
+            </div>
+          </div>
+
+          <!-- Columna derecha: tarjetas -->
+          <div class="hidden lg:flex flex-col gap-5">
+            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-95">
+              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span><span class="uppercase tracking-wide">Fluidez</span></div>
+              <h3 class="mt-2 font-medium">Narrativa en una sola toma</h3>
+              <p class="mt-1 text-sm text-slate-600">Transiciones continuo entre exterior e interior para mostrar el flujo real.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-85">
+              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">05</span><span class="uppercase tracking-wide">Listo para redes</span></div>
+              <h3 class="mt-2 font-medium">Material optimizado</h3>
+              <p class="mt-1 text-sm text-slate-600">Tomas pensadas para cortes verticales (Reels/TikTok/Shorts) y anuncios.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-75">
+              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">06</span><span class="uppercase tracking-wide">Operación</span></div>
+              <h3 class="mt-2 font-medium">Licencias y seguro</h3>
+              <p class="mt-1 text-sm text-slate-600">Operación responsable en interiores y exteriores según normativa local.</p>
+            </div>
           </div>
         </div>
 
-        <div class="mt-12 grid gap-6 md:grid-cols-2 items-center">
-          <img src="assets/dji-avata-detail.png" alt="Detalle de cámara DJI Avata" class="w-full rounded-2xl shadow-lg ring-1 ring-black/5" />
-          <ul class="grid gap-3 text-slate-700 text-sm">
-            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-emerald-500"></span><span>Captura 4K con movimiento inmersivo y sin vibraciones para tours en una sola toma.</span></li>
-            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-emerald-500"></span><span>Sonido y color cuidados en post para un look consistente entre propiedades.</span></li>
-            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-emerald-500"></span><span>Bajo perfil de ruido y tiempo de montaje rápido para minimizar interrupciones.</span></li>
-            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-emerald-500"></span><span>Seguro y licencias vigentes para operar en interiores y exteriores.</span></li>
-          </ul>
+        <!-- Chips de especificaciones/beneficios rápidos -->
+        <div class="mt-10 flex flex-wrap items-center gap-2">
+          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">4K • 2–3 min walkthrough</span>
+          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">Cinewhoop con protectores</span>
+          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">Color y audio profesionales</span>
+          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">Entrega 48–72 h</span>
         </div>
-      </div>
-    </section>
 
-    <!-- SERVICES -->
+        <div class="mt-10 md:hidden flex gap-3">
+          <a href="#work" class="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white">Ver demo
     <section id="services" class="py-20">
       <div class="mx-auto max-w-7xl px-5">
         <div class="mb-10 flex items-end justify-between gap-6">
@@ -441,4 +480,3 @@
     </script>
   </body>
 </html>
-
