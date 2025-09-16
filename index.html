@@ -104,33 +104,31 @@
     <!-- HERO -->
     <section id="home" class="relative isolate pt-36">
   <div class="mx-auto max-w-7xl px-5">
-    <!-- Card con imagen (no fondo) y título grande tipo "MAVEC 2 PRO" -->
-    <div class="relative overflow-visible rounded-[28px] bg-white ring-1 ring-black/5 shadow-xl">
-      <div class="relative grid place-items-center py-12">
-        <!-- Título gigante sobre la imagen: usa tu propio texto aquí -->
-        <h1 class="pointer-events-none select-none absolute inset-x-0 top-6 text-center font-display leading-none tracking-tight uppercase text-slate-900/10"
-            style="font-size:clamp(40px,10vw,128px); letter-spacing:-0.02em;">
+    <!-- Card con imagen (no fondo). Márgenes mínimos y flecha dentro del card, como la referencia -->
+    <div class="relative overflow-hidden rounded-[28px] bg-white ring-1 ring-black/5 shadow-xl">
+      <div class="relative">
+        <!-- Imagen de portada DJI AVATA (como la referencia) -->
+        <img src="https://i.ytimg.com/vi/QSlegMdpjpc/maxresdefault.jpg" alt="DJI Avata hero" class="block w-full select-none" />
+
+        <!-- Título grande reemplazando MAVEC 2 PRO -->
+        <h1 class="pointer-events-none select-none absolute inset-x-0 top-6 text-center font-display leading-none tracking-tight uppercase text-white drop-shadow-[0_2px_10px_rgba(0,0,0,.45)]"
+            style="font-size:clamp(42px,10vw,128px); letter-spacing:-0.02em;">
           Real Estate Videos
         </h1>
-        <!-- Imagen DJI AVATA (no background) -->
-        <img src="https://se-cdn.djiits.com/tpc/uploads/spu/cover/daf2c8fd679eb886c0ba45a1d015a5fc@xlarge.png" alt="DJI Avata FPV drone" class="relative z-10 w-[min(920px,92%)] drop-shadow-xl select-none" />
-        <!-- Botón principal debajo de la imagen -->
-        <div class="mt-6 z-10">
-          <a href="#book" class="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 font-semibold text-black shadow hover:shadow-md">Book a flight</a>
-        </div>
+
+        <!-- Botón principal sobre la imagen -->
+        <a href="#book" class="absolute left-1/2 -translate-x-1/2 bottom-8 inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 font-semibold text-black shadow hover:shadow-md">Book a flight</a>
+      </div>
+
+      <!-- Flecha dentro del card con margen mínimo -->
+      <div class="grid place-items-center py-2">
+        <svg class="h-6 w-6 text-slate-700/70" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
     </div>
 
-    <!-- Flecha y texto que antes iba bajo el título -->
-    <div class="mt-6 flex justify-center">
-      <a href="#hero-more" class="group inline-flex flex-col items-center text-white/60 hover:text-white">
-        <svg class="h-6 w-6 transition-transform group-hover:translate-y-1" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="sr-only">Scroll</span>
-      </a>
-    </div>
-
+    <!-- Todo el texto que iba antes debajo del título, ahora VA DEBAJO de la flecha (fuera del card) -->
     <div id="hero-more" class="mx-auto mt-6 max-w-3xl text-center">
       <p class="text-lg text-white/80">FPV cinematic walkthroughs inside and out, aerials, photos, reels, and 3D — professionally edited and delivered in 48–72 hours.</p>
       <div class="mt-6 grid grid-cols-2 gap-3 text-sm text-white/70 sm:grid-cols-4">
