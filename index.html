@@ -40,6 +40,10 @@
     <style>
       html, body { height: 100%; }
       .glass { backdrop-filter: saturate(140%) blur(10px); }
+      /* Avata interactive cards (hover/click reveals) */
+      .avata-card { position: relative; }
+      .avata-card .overlay { opacity: 0; transform: translateY(6px); transition: opacity .35s ease, transform .35s ease; }
+      .avata-card:hover .overlay, .avata-card[aria-expanded="true"] .overlay { opacity: 1; transform: translateY(0); }
     </style>
   </head>
   <body class="bg-obsidian text-ink font-sans antialiased">
@@ -109,82 +113,7 @@
     <!-- AVATA (DJI) -->
     <section id="avata" class="relative bg-[#F7F8FA] text-slate-900">
       <div class="mx-auto max-w-7xl px-5 py-20">
-        <header class="mb-10 flex items-end justify-between gap-6">
-          <div>
-            <p class="text-xs font-semibold tracking-widest text-slate-500 uppercase">Equipo</p>
-            <h2 class="mt-1 font-display text-3xl md:text-4xl font-semibold tracking-tight">DJI Avata para Real Estate</h2>
-            <p class="mt-3 max-w-2xl text-slate-600">Nuestro dron FPV de formato <em>cinewhoop</em> con protectores de hélice — ideal para vuelos seguros en interiores, transiciones fluidas y una narrativa continua que muestra el flujo real de la propiedad.</p>
-          </div>
-          <div class="hidden md:flex gap-3">
-            <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Ver demos</a>
-            <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-black">Agendar vuelo</a>
-          </div>
-        </header>
-
-        <!-- Feature layout inspirado en tu referencia: círculo central + tarjetas laterales -->
-        <div class="grid items-center gap-8 lg:grid-cols-3">
-          <!-- Columna izquierda: tarjetas -->
-          <div class="hidden lg:flex flex-col gap-5">
-            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">01</span><span class="uppercase tracking-wide">Safety</span></div>
-              <h3 class="mt-2 font-medium">Cinewhoop seguro en interiores</h3>
-              <p class="mt-1 text-sm text-slate-600">Protectores de hélice para volar por puertas, pasillos y escaleras con confianza.</p>
-            </div>
-            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-90">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span><span class="uppercase tracking-wide">Control</span></div>
-              <h3 class="mt-2 font-medium">Precisión en espacios estrechos</h3>
-              <p class="mt-1 text-sm text-slate-600">Movimientos suaves y reveals dinámicos que cuentan la historia de la casa.</p>
-            </div>
-            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-80">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span><span class="uppercase tracking-wide">Estabilidad</span></div>
-              <h3 class="mt-2 font-medium">Estabilización avanzada</h3>
-              <p class="mt-1 text-sm text-slate-600">Footage sedoso y sin vibraciones, listo para edición profesional.</p>
-            </div>
-          </div>
-
-          <!-- Centro: tarjeta circular -->
-          <div class="relative mx-auto w-full max-w-xl">
-            <div class="relative aspect-square rounded-full bg-white ring-1 ring-black/5 shadow-xl flex items-center justify-center overflow-hidden">
-              <div class="absolute inset-0 rounded-full border border-slate-200"></div>
-              <div class="absolute inset-6 rounded-full border border-slate-100"></div>
-              <img src="assets/dji-avata-center.png" alt="DJI Avata" class="relative z-[1] w-4/5 max-w-md drop-shadow-xl" />
-            </div>
-            <div class="mt-6 text-center">
-              <h3 class="text-xl font-semibold">Cámara 4K Ultra‑HD</h3>
-              <p class="mt-1 text-slate-600">Walkthroughs inmersivos con claridad excepcional y color consistente para YouTube y MLS.</p>
-            </div>
-          </div>
-
-          <!-- Columna derecha: tarjetas -->
-          <div class="hidden lg:flex flex-col gap-5">
-            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-95">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span><span class="uppercase tracking-wide">Fluidez</span></div>
-              <h3 class="mt-2 font-medium">Narrativa en una sola toma</h3>
-              <p class="mt-1 text-sm text-slate-600">Transiciones continuo entre exterior e interior para mostrar el flujo real.</p>
-            </div>
-            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-85">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">05</span><span class="uppercase tracking-wide">Listo para redes</span></div>
-              <h3 class="mt-2 font-medium">Material optimizado</h3>
-              <p class="mt-1 text-sm text-slate-600">Tomas pensadas para cortes verticales (Reels/TikTok/Shorts) y anuncios.</p>
-            </div>
-            <div class="rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-sm opacity-75">
-              <div class="flex items-center gap-2 text-slate-400 text-xs"><span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">06</span><span class="uppercase tracking-wide">Operación</span></div>
-              <h3 class="mt-2 font-medium">Licencias y seguro</h3>
-              <p class="mt-1 text-sm text-slate-600">Operación responsable en interiores y exteriores según normativa local.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Chips de especificaciones/beneficios rápidos -->
-        <div class="mt-10 flex flex-wrap items-center gap-2">
-          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">4K • 2–3 min walkthrough</span>
-          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">Cinewhoop con protectores</span>
-          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">Color y audio profesionales</span>
-          <span class="rounded-full bg-white px-4 py-2 text-sm ring-1 ring-black/5">Entrega 48–72 h</span>
-        </div>
-
-        <div class="mt-10 md:hidden flex gap-3">
-          <a href="#work" class="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white">Ver demo
+        <header class="mb-10 flex it
     <section id="services" class="py-20">
       <div class="mx-auto max-w-7xl px-5">
         <div class="mb-10 flex items-end justify-between gap-6">
