@@ -48,7 +48,13 @@
       .stack-card.d2 { z-index: 20; transform: translateY(4px) scale(.99); filter: blur(.15px); opacity: .96; }
       .stack-card.d3 { z-index: 30; transform: translateY(0) scale(1); filter: none; opacity: 1; }
       .stack-card:hover { z-index: 60; transform: translateY(-6px) scale(1.04); filter: none; opacity: 1; box-shadow: 0 16px 40px rgba(2,6,23,.14); }
-    </style>e/5 ring-1 ring-white/10">
+    </style>
+  </head>
+  <body class="bg-obsidian text-ink font-sans antialiased">
+    <!-- NAV -->
+    <header class="fixed inset-x-0 top-0 z-50">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mt-5 mb-3 rounded-2xl glass bg-white/5 ring-1 ring-white/10">
           <div class="flex items-center justify-between px-4 py-3">
             <a href="#home" class="flex items-center gap-2">
               <div class="h-8 w-8 rounded-lg bg-accent/20 ring-1 ring-accent"></div>
@@ -117,15 +123,12 @@
           <p class="mt-3 max-w-3xl mx-auto text-slate-600">Our primary FPV cinewhoop. Ducted prop guards and agile control enable safe indoor flights, fluid transitions and one‑take storytelling across exterior and interior spaces.</p>
         </header>
 
-        <!-- Layout EXACT style: center circle + side stacks -->
+        <!-- LEFT · CENTER · RIGHT -->
         <div class="grid items-center gap-8 lg:grid-cols-3 xl:grid-cols-[1.25fr_1fr_1.25fr]">
-          <!-- LEFT STACK -->
+
+          <!-- LEFT STACK (01 deepest ← 03 front near circle) -->
           <div class="hidden lg:flex items-center justify-end stack-line">
-            <!-- 01 (deepest) -->
-         <div class="grid items-center gap-8 lg:grid-cols-3 xl:grid-cols-[1.25fr_1fr_1.25fr]">g-1 ring-bl<!-- LEFT STACK -->
-          <div class="hidden lg:flex items-center justify-end stack-line">
-            <!-- 01 (deepest) -->
-            <article class="stack-card d1 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer">
+            <article class="stack-card d1 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">01</span>
                 <span class="uppercase">Advanced Obstacle Avoidance</span>
@@ -133,8 +136,7 @@
               <h4 class="mt-2 font-medium">Fly safely with smart sensors</h4>
               <p class="mt-1 text-sm text-slate-600">Onboard sensing helps detect nearby objects for safer paths through doors and tight corners.</p>
             </article>
-            <!-- 02 (middle) -->
-            <article class="stack-card d2 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer">
+            <article class="stack-card d2 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
                 <span class="uppercase">Precision Control</span>
@@ -142,8 +144,7 @@
               <h4 class="mt-2 font-medium">Agile motion in tight spaces</h4>
               <p class="mt-1 text-sm text-slate-600">Confident moves around furniture for elegant reveals and transitions.</p>
             </article>
-            <!-- 03 (front, near circle) -->
-            <article class="stack-card d3 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer">
+            <article class="stack-card d3 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
                 <span class="uppercase">Advanced Stabilization</span>
@@ -153,23 +154,22 @@
             </article>
           </div>
 
-          <!-- CENTER CIRCLE --> 04 (deepest) -->
-            <article class="stack-card d1 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer">
-              <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
-                <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span>
-                <span class="uppercase">Extended Flight Time</span>
-              </div>
-              <h4 class="mt-2 font-medium">Up to 20+ minutes</h4>
-              <p class="mt-1 text-sm text-slate-600">Plenty of endurance for multiple takes and exteriors.</p>
-            </article>
+          <!-- CENTER CIRCLE (image restored) -->
+          <div class="relative mx-auto w-full max-w-xl">
+            <div class="relative aspect-square rounded-full bg-white ring-1 ring-black/5 shadow-xl flex items-center justify-center overflow-hidden">
+              <div class="absolute inset-0 rounded-full border border-slate-200"></div>
+              <div class="absolute inset-6 rounded-full border border-slate-100"></div>
+              <img src="https://se-cdn.djiits.com/tpc/uploads/spu/cover/daf2c8fd679eb886c0ba45a1d015a5fc@xlarge.png" alt="DJI Avata FPV drone" class="relative z-[1] w-4/5 max-w-md drop-shadow-xl pointer-events-none select-none" />
+            </div>
+            <div class="mt-6 text-center">
+              <h3 class="text-xl font-semibold">4K Ultra‑HD Camera</h3>
+              <p class="mt-1 text-slate-600">Capture stunning walkthroughs with incredible clarity.</p>
+            </div>
           </div>
 
-          <!-- MOBILE: simple list -->
-        <div class="mt-10 grid gap-3 lg:hidden">
-          <details class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><summary class="cursor-pointer font-medium">Advanced Obstacl<!-- RIGHT STACK -->
+          <!-- RIGHT STACK (02 front near circle → 04 deepest) -->
           <div class="hidden lg:flex items-center justify-start stack-line">
-            <!-- 02 (front, near circle) -->
-            <article class="stack-card d3 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer">
+            <article class="stack-card d3 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">02</span>
                 <span class="uppercase">Intelligent Flight Modes</span>
@@ -177,8 +177,7 @@
               <h4 class="mt-2 font-medium">Follow, Waypoints, and more</h4>
               <p class="mt-1 text-sm text-slate-600">Automated aids that keep moves smooth and repeatable.</p>
             </article>
-            <!-- 03 (middle) -->
-            <article class="stack-card d2 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer">
+            <article class="stack-card d2 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">03</span>
                 <span class="uppercase">4K Recording</span>
@@ -186,8 +185,7 @@
               <h4 class="mt-2 font-medium">High‑detail image</h4>
               <p class="mt-1 text-sm text-slate-600">Sharp picture and consistent color for YouTube, MLS and ads.</p>
             </article>
-            <!-- 04 (deepest) -->
-            <article class="stack-card d1 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md cursor-pointer">
+            <article class="stack-card d1 w-52 sm:w-56 shrink-0 rounded-2xl bg-white p-5 ring-1 ring-black/5 shadow-md">
               <div class="flex items-center gap-2 text-slate-400 text-[11px] tracking-wide">
                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 font-semibold">04</span>
                 <span class="uppercase">Extended Flight Time</span>
@@ -196,8 +194,50 @@
               <p class="mt-1 text-sm text-slate-600">Plenty of endurance for multiple takes and exteriors.</p>
             </article>
           </div>
+        </div>
 
-          <!-- MOBILE: simple list -->ext-lg">Social Media Reels</h3>
+        <!-- MOBILE: simple list -->
+        <div class="mt-10 grid gap-3 lg:hidden">
+          <details class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><summary class="cursor-pointer font-medium">Advanced Obstacle Avoidance</summary><p class="mt-2 text-sm text-slate-600">Smart sensing to detect nearby objects for safer indoor flight.</p></details>
+          <details class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><summary class="cursor-pointer font-medium">Intelligent Flight Modes</summary><p class="mt-2 text-sm text-slate-600">Follow Me, Waypoints and more for effortless operation.</p></details>
+          <details class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><summary class="cursor-pointer font-medium">Advanced Stabilization</summary><p class="mt-2 text-sm text-slate-600">Silky, steady footage with minimal micro‑jitter.</p></details>
+          <details class="rounded-2xl bg-white p-5 ring-1 ring-black/5"><summary class="cursor-pointer font-medium">Extended Flight Time</summary><p class="mt-2 text-sm text-slate-600">Up to 20+ minutes on a single charge.</p></details>
+        </div>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white">View demos</a>
+          <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-emerald-400 px-5 py-3 text-sm font-semibold text-black">Book a flight</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Services</h2>
+            <p class="mt-2 max-w-2xl text-white/70">Everything an agent needs: a single FPV take that showcases flow, crisp HDR photos, aerial establishing shots, short‑form reels, and optional 3D tours.</p>
+          </div>
+          <a href="#pricing" class="hidden md:inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15">Pricing details</a>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card -->
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">FPV Tour In/Out</h3>
+            <p class="mt-2 text-white/70">Continuous cinematic walkthrough (2–3 min) capturing exterior and interior in one flowing story.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Aerial & Static Shots</h3>
+            <p class="mt-2 text-white/70">Elevated establishing shots, neighborhood context and classic locked shots for balance.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Professional Photo Set</h3>
+            <p class="mt-2 text-white/70">20–30 HDR photos, interior/exterior plus aerial stills — ready for MLS and brochures.</p>
+          </article>
+          <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
+            <h3 class="font-medium text-lg">Social Media Reels</h3>
             <p class="mt-2 text-white/70">30–60s vertical edits with hooks, captions and brand elements for Reels/TikTok/Shorts.</p>
           </article>
           <article class="rounded-2xl bg-surface p-6 ring-1 ring-white/5">
