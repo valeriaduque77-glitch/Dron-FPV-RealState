@@ -104,7 +104,7 @@
   display: block;
 }
 
-      /* Corrige la galería (sin recortes, misma alineación visual que videos) */
+/* Corrige la galería (sin recortes, misma alineación visual que videos) */
 #work .gallery-card {
   width: 100%;
   height: auto;
@@ -115,14 +115,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 35px; /* 👈 agrega espacio solo abajo del marco */
+  padding-bottom: 35px; /* agrega espacio solo abajo del marco */
 }
 
 /* Galería horizontal */
 #work .gallery-scroll {
   display: flex;
   gap: 16px;
-  overflow-x: auto;              /* 👈 asegura el scroll horizontal */
+  overflow-x: auto;              /* asegura el scroll horizontal */
   overflow-y: visible;
   scroll-snap-type: x mandatory;
   align-items: center;
@@ -130,7 +130,7 @@
   padding: 0 5%;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  max-height: none;              /* 👈 quita límite de alto para mostrar todo */
+  max-height: none;              /* quita límite de alto para mostrar todo */
 }
 
 #work .gallery-scroll::-webkit-scrollbar {
@@ -141,7 +141,7 @@
 #work .gallery-scroll img {
   flex-shrink: 0;
   height: auto;           /* deja que la imagen determine su altura */
-  max-height: 360px;      /* 👈 altura máxima visual para mantener equilibrio */
+  max-height: 360px;      /* altura máxima visual para mantener equilibrio */
   width: auto;            /* mantiene proporción original */
   object-fit: contain;    /* muestra toda la imagen completa */
   border-radius: 12px;
@@ -149,7 +149,21 @@
   transition: transform 0.3s ease;
 }
 
-/* Flechas de la galería */
+/* 🔻 Etiquetas de los videos e imágenes (posición inferior izquierda) */
+.relative > span {
+  position: absolute !important;
+  bottom: 10px;
+  left: 10px;
+  top: auto !important;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  z-index: 15;
+}
+
+/* ⚙️ Flechas de la galería */
 .gallery-arrow {
   position: absolute;
   top: 50%;
@@ -157,24 +171,26 @@
   background: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  font-size: 1.8rem;
-  padding: 8px 14px;
+  font-size: 1.2rem;   /* más pequeñas */
+  padding: 4px 8px;    /* compactas */
   border-radius: 50%;
   cursor: pointer;
   z-index: 20;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .gallery-arrow:hover {
   background: rgba(255,255,255,0.3);
+  transform: translateY(-50%) scale(1.15);
 }
 
+/* Ajuste de posición exterior del marco */
 .left-arrow {
-  left: -25px; /* fuera del marco */
+  left: -18px;   /* antes -25px */
 }
 
 .right-arrow {
-  right: -25px; /* fuera del marco */
+  right: -18px;  /* antes -25px */
 }
 
     </style>
