@@ -1333,21 +1333,23 @@ if (gallery) {
 
 <!-- NUEVO SCRIPT: controla las flechas del carrusel -->
 <script>
-document.querySelectorAll('.gallery-card').forEach(card => {
-  const scrollContainer = card.querySelector('.gallery-scroll');
-  const leftArrow = card.querySelector('.left-arrow');
-  const rightArrow = card.querySelector('.right-arrow');
+document.querySelectorAll('#work .gallery-scroll').forEach(scrollContainer => {
+  const parent = scrollContainer.closest('#work');
+  const leftArrow = parent.querySelector('.left-arrow');
+  const rightArrow = parent.querySelector('.right-arrow');
 
-  if (scrollContainer && leftArrow && rightArrow) {
-    leftArrow.addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: -400, behavior: 'smooth' });
-    });
-    rightArrow.addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: 400, behavior: 'smooth' });
-    });
+  const scrollByImage = (direction) => {
+    const imgWidth = scrollContainer.querySelector('img')?.clientWidth || 400;
+    scrollContainer.scrollBy({ left: direction * (imgWidth + 16), behavior: 'smooth' });
+  };
+
+  if (leftArrow && rightArrow && scrollContainer) {
+    leftArrow.addEventListener('click', () => scrollByImage(-1));
+    rightArrow.addEventListener('click', () => scrollByImage(1));
   }
 });
 </script>
+
 
 </body>
 </html>
