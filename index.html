@@ -163,34 +163,36 @@
   z-index: 15;
 }
 
-/* ⚙️ Flechas de la galería */
+/* ⚙️ Flechas de la galería visibles */
 .gallery-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0.25); /* más clara y visible */
   color: white;
-  border: none;
-  font-size: 1.2rem;   /* más pequeñas */
-  padding: 4px 8px;    /* compactas */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;      /* tamaño equilibrado */
+  padding: 6px 10px;      /* más pequeñas pero aún clickeables */
   border-radius: 50%;
   cursor: pointer;
-  z-index: 20;
-  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 50;            /* asegura que estén por encima de todo */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
+/* Hover efecto */
 .gallery-arrow:hover {
-  background: rgba(255,255,255,0.3);
-  transform: translateY(-50%) scale(1.15);
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.1);
 }
 
-/* Ajuste de posición exterior del marco */
+/* Reposicionamiento: dentro del marco, sin ser cortadas */
 .left-arrow {
-  left: -18px;   /* antes -25px */
+  left: 8px;   /* visible dentro del marco */
 }
 
 .right-arrow {
-  right: -18px;  /* antes -25px */
+  right: 8px;  /* visible dentro del marco */
 }
 
     </style>
@@ -616,8 +618,8 @@
         <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">Portfolio</h2>
         <p class="mt-2 max-w-2xl text-white/80">
           Selected projects — inline playback. Tap to play.<br>
-          💡 <span class="text-white/70">For the best experience, adjust video quality to the highest resolution.</span><br>
-          🖼️ <span class="text-white/70">In the HDR Photo section below, click inside the frame and scroll horizontally to explore the gallery.</span>
+          <span class="text-white/70">For the best experience, adjust video quality to the highest resolution.</span><br>
+          <span class="text-white/70">In the HDR Photo section below, click inside the frame and scroll horizontally to explore the gallery.</span>
         </p>
       </div>
 
