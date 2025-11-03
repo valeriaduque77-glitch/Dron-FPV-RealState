@@ -209,6 +209,28 @@
   white-space: nowrap; /* mantiene frases completas en una sola línea */
 }
 
+      /* Solo muestra thumbnail en mobile */
+@media (max-width: 768px) {
+  .desktop-iframe {
+    display: none !important;
+  }
+  .mobile-thumb,
+  .mobile-play {
+    display: block;
+  }
+}
+
+/* Solo muestra iframe en desktop */
+@media (min-width: 769px) {
+  .mobile-thumb,
+  .mobile-play {
+    display: none !important;
+  }
+  .desktop-iframe {
+    display: block;
+  }
+}
+
       
     </style>
   </head>
@@ -629,99 +651,103 @@
 <section id="work" class="portfolio-solid py-20">
   <div class="portfolio-content">
     <div class="mx-auto max-w-7xl px-5">
+      <!-- Title + Instructions -->
       <div class="mb-8 text-center md:text-left">
         <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">Portfolio</h2>
-<p class="mt-2 text-white/80 portfolio-description">
-  Selected projects — inline playback. Tap to play.<br>
-  <span class="text-white/70">For the best experience, adjust video quality to the highest resolution.</span><br>
-  <span class="text-white/70">In the HDR Photo section below, click inside the frame and scroll horizontally to explore the gallery.</span>
-</p>
-
+        <p class="mt-2 text-white/80 portfolio-description">
+          Selected projects — inline playback. Tap to play.<br>
+          💡 <span class="text-white/70">For the best experience, adjust video quality to the highest resolution.</span><br>
+          🖼️ <span class="text-white/70">In the HDR Photo section below, click inside the frame and scroll horizontally to explore the gallery.</span>
+        </p>
       </div>
 
+      <!-- Video + Gallery Grid -->
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-        <!-- 🎥 1 -->
-        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Real Estate Video</span>
-          <div class="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/NZqIi3c-dUo?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Luxury Mansion in Las Palmas"
-              class="w-full h-full"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <!-- 1️⃣ FPV Real Estate -->
+        <div class="yt-card relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent" data-ytid="NZqIi3c-dUo">
+          <span class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Real Estate Video</span>
+          <img class="w-full aspect-video object-cover mobile-thumb" src="https://img.youtube.com/vi/NZqIi3c-dUo/hqdefault.jpg" alt="Luxury Mansion in Las Palmas" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer mobile-play">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
+          <iframe class="desktop-iframe absolute inset-0 w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/NZqIi3c-dUo?rel=0&modestbranding=1&playsinline=1"
+            title="Luxury Mansion in Las Palmas" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
 
-        <!-- 🎥 2 -->
-        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Commercial Video</span>
-          <div class="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/iB4pQz_Oico?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Secrets Playa del Carmen | Luxury Resort"
-              class="w-full h-full"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <!-- 2️⃣ FPV Commercial -->
+        <div class="yt-card relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent" data-ytid="iB4pQz_Oico">
+          <span class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Commercial Video</span>
+          <img class="w-full aspect-video object-cover mobile-thumb" src="https://img.youtube.com/vi/iB4pQz_Oico/hqdefault.jpg" alt="Secrets Playa del Carmen" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer mobile-play">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
+          <iframe class="desktop-iframe absolute inset-0 w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/iB4pQz_Oico?rel=0&modestbranding=1&playsinline=1"
+            title="Secrets Playa del Carmen" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
 
-        <!-- 🎥 3 -->
-        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Real Estate Video</span>
-          <div class="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/YwPtrF-ISzs?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Medellin Real Estate | SOLD Property"
-              class="w-full h-full"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <!-- 3️⃣ FPV Medellín -->
+        <div class="yt-card relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent" data-ytid="YwPtrF-ISzs">
+          <span class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Real Estate Video</span>
+          <img class="w-full aspect-video object-cover mobile-thumb" src="https://img.youtube.com/vi/YwPtrF-ISzs/hqdefault.jpg" alt="Medellín Real Estate" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer mobile-play">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
+          <iframe class="desktop-iframe absolute inset-0 w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/YwPtrF-ISzs?rel=0&modestbranding=1&playsinline=1"
+            title="Medellin Real Estate" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
 
-        <!-- 🎥 4 -->
-        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Boat Video</span>
-          <div class="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/0UveCq_7piE?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Magic on the Water | FPV + Cinematic"
-              class="w-full h-full"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <!-- 4️⃣ FPV Boat -->
+        <div class="yt-card relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent" data-ytid="0UveCq_7piE">
+          <span class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Boat Video</span>
+          <img class="w-full aspect-video object-cover mobile-thumb" src="https://img.youtube.com/vi/0UveCq_7piE/hqdefault.jpg" alt="Magic on the Water" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer mobile-play">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
+          <iframe class="desktop-iframe absolute inset-0 w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/0UveCq_7piE?rel=0&modestbranding=1&playsinline=1"
+            title="Magic on the Water" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
 
-        <!-- 🎥 5 -->
-        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">Real Estate Reel</span>
-          <div class="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/oN-Jy3ZwfLI?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="FPV Reel — Cinematic Realty Media"
-              class="w-full h-full"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>
+        <!-- 5️⃣ FPV Reel -->
+        <div class="yt-card relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent" data-ytid="oN-Jy3ZwfLI">
+          <span class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">Real Estate Reel</span>
+          <img class="w-full aspect-video object-cover mobile-thumb" src="https://img.youtube.com/vi/oN-Jy3ZwfLI/hqdefault.jpg" alt="FPV Reel — Cinematic Realty Media" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer mobile-play">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
+          <iframe class="desktop-iframe absolute inset-0 w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/oN-Jy3ZwfLI?rel=0&modestbranding=1&playsinline=1"
+            title="FPV Reel" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
 
-        <!-- 🖼️ 6 - Galería HDR -->
+        <!-- 6️⃣ HDR Gallery -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">HDR Real Estate Photos</span>
+          <span class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">HDR Real Estate Photos</span>
 
-          <!-- Flechas -->
           <button class="gallery-arrow left-arrow">❮</button>
           <button class="gallery-arrow right-arrow">❯</button>
 
@@ -737,9 +763,6 @@
               <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo8.jpg" alt="HDR 8">
               <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo9.jpg" alt="HDR 9">
               <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo10.jpg" alt="HDR 10">
-              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo11.jpg" alt="HDR 11">
-              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo12.jpg" alt="HDR 12">
-              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo13.jpg" alt="HDR 13">
             </div>
           </div>
         </div>
@@ -1331,25 +1354,42 @@ if (gallery) {
 }
 </script>
 
-<!-- NUEVO SCRIPT: controla las flechas del carrusel -->
+<!-- NUEVO SCRIPT: control de galería y reproducción mobile -->
 <script>
+// 🎥 Click-to-play solo en mobile
+document.querySelectorAll('.yt-card').forEach(card => {
+  const id = card.getAttribute('data-ytid');
+  if (window.innerWidth <= 768) {
+    card.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+      iframe.title = 'YouTube video player';
+      iframe.frameBorder = '0';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.className = 'absolute inset-0 w-full h-full';
+      card.innerHTML = '';
+      card.appendChild(iframe);
+    }, { once: true });
+  }
+});
+
+// 🖼️ Flechas HDR Gallery
 document.querySelectorAll('#work .gallery-scroll').forEach(scrollContainer => {
   const parent = scrollContainer.closest('#work');
   const leftArrow = parent.querySelector('.left-arrow');
   const rightArrow = parent.querySelector('.right-arrow');
 
-  const scrollByImage = (direction) => {
-    const imgWidth = scrollContainer.querySelector('img')?.clientWidth || 400;
-    scrollContainer.scrollBy({ left: direction * (imgWidth + 16), behavior: 'smooth' });
-  };
-
   if (leftArrow && rightArrow && scrollContainer) {
-    leftArrow.addEventListener('click', () => scrollByImage(-1));
-    rightArrow.addEventListener('click', () => scrollByImage(1));
+    leftArrow.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+    rightArrow.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: 400, behavior: 'smooth' });
+    });
   }
 });
 </script>
-
-
 </body>
 </html>
+
