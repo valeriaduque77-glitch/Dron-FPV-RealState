@@ -103,31 +103,34 @@
   object-fit: cover;
   display: block;
 }
-/* Corrige la galería (sin recortes, misma alineación visual que videos) */
+
+      /* Corrige la galería (sin recortes, misma alineación visual que videos) */
 #work .gallery-card {
   width: 100%;
   height: auto;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  overflow: visible; /* permite que la imagen se extienda un poco si lo necesita */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 35px; /* 👈 agrega espacio solo abajo del marco */
 }
 
 /* Galería horizontal */
 #work .gallery-scroll {
   display: flex;
   gap: 16px;
-  overflow-x: auto;
+  overflow-x: auto;              /* 👈 asegura el scroll horizontal */
+  overflow-y: visible;
   scroll-snap-type: x mandatory;
   align-items: center;
   width: 100%;
   padding: 0 5%;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  max-height: 315px; /* iguala el alto máximo a los videos, pero sin recortar */
+  max-height: none;              /* 👈 quita límite de alto para mostrar todo */
 }
 
 #work .gallery-scroll::-webkit-scrollbar {
@@ -137,10 +140,10 @@
 /* Imágenes sin recorte */
 #work .gallery-scroll img {
   flex-shrink: 0;
-  height: auto;          /* deja que la imagen determine su altura */
-  max-height: 315px;     /* limita el alto sin recortar */
-  width: auto;           /* mantiene proporción original */
-  object-fit: contain;   /* muestra toda la imagen */
+  height: auto;           /* deja que la imagen determine su altura */
+  max-height: 360px;      /* 👈 altura máxima visual para mantener equilibrio */
+  width: auto;            /* mantiene proporción original */
+  object-fit: contain;    /* muestra toda la imagen completa */
   border-radius: 12px;
   scroll-snap-align: center;
   transition: transform 0.3s ease;
