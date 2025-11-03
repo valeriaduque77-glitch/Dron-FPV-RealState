@@ -149,6 +149,33 @@
   transition: transform 0.3s ease;
 }
 
+/* Flechas de la galería */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.3s ease;
+}
+
+.gallery-arrow:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.left-arrow {
+  left: -25px; /* fuera del marco */
+}
+
+.right-arrow {
+  right: -25px; /* fuera del marco */
+}
 
     </style>
   </head>
@@ -569,16 +596,21 @@
 <section id="work" class="portfolio-solid py-20">
   <div class="portfolio-content">
     <div class="mx-auto max-w-7xl px-5">
-      <div class="mb-8">
+      <div class="mb-8 text-center md:text-left">
         <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">Portfolio</h2>
-        <p class="mt-2 max-w-2xl text-white/80">Selected projects — inline playback. Tap to play.</p>
+        <p class="mt-2 max-w-2xl text-white/80">
+          Selected projects — inline playback. Tap to play.<br>
+          💡 <span class="text-white/70">For the best experience, adjust video quality to the highest resolution.</span><br>
+          🖼️ <span class="text-white/70">In the HDR Photo section below, click inside the frame and scroll horizontally to explore the gallery.</span>
+        </p>
       </div>
 
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
         <!-- 🎥 1 -->
-     <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-        <div class="aspect-video">
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
+          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Real Estate Video</span>
+          <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/NZqIi3c-dUo?playsinline=1&rel=0&modestbranding=1&controls=1"
               title="Luxury Mansion in Las Palmas"
@@ -591,7 +623,8 @@
         </div>
 
         <!-- 🎥 2 -->
-  <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
+          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Commercial Video</span>
           <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/iB4pQz_Oico?playsinline=1&rel=0&modestbranding=1&controls=1"
@@ -606,6 +639,7 @@
 
         <!-- 🎥 3 -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
+          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Real Estate Video</span>
           <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/YwPtrF-ISzs?playsinline=1&rel=0&modestbranding=1&controls=1"
@@ -620,6 +654,7 @@
 
         <!-- 🎥 4 -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
+          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">FPV Boat Video</span>
           <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/0UveCq_7piE?playsinline=1&rel=0&modestbranding=1&controls=1"
@@ -632,48 +667,53 @@
           </div>
         </div>
 
-<!-- 🎥 5 - FPV Reel (misma proporción que los anteriores) -->
-<div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-  <div class="aspect-video">
-    <iframe
-      src="https://www.youtube.com/embed/oN-Jy3ZwfLI?playsinline=1&rel=0&modestbranding=1&controls=1"
-      title="FPV Reel — Cinematic Realty Media"
-      class="w-full h-full"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-      referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-  </div>
-</div>
+        <!-- 🎥 5 -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
+          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">Real Estate Reel</span>
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/oN-Jy3ZwfLI?playsinline=1&rel=0&modestbranding=1&controls=1"
+              title="FPV Reel — Cinematic Realty Media"
+              class="w-full h-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+        </div>
 
-<!-- 🖼️ 6 - Galería HDR -->
-<div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
-  <div class="gallery-container">
-    <div class="gallery-scroll">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo1.jpg" alt="HDR 1">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo2.jpg" alt="HDR 2">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo3.jpg" alt="HDR 3">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo4.jpg" alt="HDR 4">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo5.jpg" alt="HDR 5">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo6.jpg" alt="HDR 6">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo7.jpg" alt="HDR 7">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo8.jpg" alt="HDR 8">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo9.jpg" alt="HDR 9">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo10.jpg" alt="HDR 10">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo11.jpg" alt="HDR 11">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo12.jpg" alt="HDR 12">
-      <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo13.jpg" alt="HDR 13">
-    </div>
-  </div>
-</div>
+        <!-- 🖼️ 6 - Galería HDR -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-transparent">
+          <span class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10">HDR Real Estate Photos</span>
 
+          <!-- Flechas -->
+          <button class="gallery-arrow left-arrow">❮</button>
+          <button class="gallery-arrow right-arrow">❯</button>
+
+          <div class="gallery-container">
+            <div class="gallery-scroll">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo1.jpg" alt="HDR 1">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo2.jpg" alt="HDR 2">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo3.jpg" alt="HDR 3">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo4.jpg" alt="HDR 4">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo5.jpg" alt="HDR 5">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo6.jpg" alt="HDR 6">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo7.jpg" alt="HDR 7">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo8.jpg" alt="HDR 8">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo9.jpg" alt="HDR 9">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo10.jpg" alt="HDR 10">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo11.jpg" alt="HDR 11">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo12.jpg" alt="HDR 12">
+              <img src="https://raw.githubusercontent.com/valeriaduque77-glitch/Dron-FPV-RealState/main/Photo13.jpg" alt="HDR 13">
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
 </section>
-
 
 <section id="avata" class="relative bg-gray-50 text-slate-900 pt-20 pb-10 lg:pb-20">
   <div class="mx-auto max-w-7xl px-5">
@@ -1255,7 +1295,25 @@ if (gallery) {
     gallery.appendChild(firstClone);
   }
 }
-
 </script>
+
+<!-- NUEVO SCRIPT: controla las flechas del carrusel -->
+<script>
+document.querySelectorAll('.gallery-card').forEach(card => {
+  const scrollContainer = card.querySelector('.gallery-scroll');
+  const leftArrow = card.querySelector('.left-arrow');
+  const rightArrow = card.querySelector('.right-arrow');
+
+  if (scrollContainer && leftArrow && rightArrow) {
+    leftArrow.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+    rightArrow.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: 400, behavior: 'smooth' });
+    });
+  }
+});
+</script>
+
 </body>
 </html>
