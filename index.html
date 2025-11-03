@@ -132,14 +132,15 @@
 
 #work .gallery-scroll {
   display: flex;
-  gap: 16px; /* Espacio entre imágenes */
+  gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   align-items: center;
   width: 100%;
-  padding: 0 5%; /* deja ver un poco de la anterior/siguiente */
+  padding: 0 5%;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  height: 315px; /* mismo alto visual que los videos */
 }
 
 #work .gallery-scroll::-webkit-scrollbar {
@@ -148,14 +149,14 @@
 
 #work .gallery-scroll img {
   flex-shrink: 0;
-  width: 90%; /* muestra parte de la imagen anterior y siguiente */
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: 100%;          /* llena el alto del marco */
+  width: auto;           /* mantiene proporción original */
+  object-fit: contain;   /* sin recortes */
   border-radius: 12px;
   scroll-snap-align: center;
   transition: transform 0.3s ease;
-  transform: scale(1.05);
 }
+
 
     </style>
   </head>
