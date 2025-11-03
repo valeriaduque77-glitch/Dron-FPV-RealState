@@ -163,38 +163,53 @@
   z-index: 15;
 }
 
-/* ⚙️ Flechas de la galería visibles */
+/* ⚙️ Flechas de la galería (versión pequeña, redonda y pegada al borde) */
 .gallery-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.25); /* más clara y visible */
+  background: rgba(255, 255, 255, 0.25);
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 1.4rem;      /* tamaño equilibrado */
-  padding: 6px 10px;      /* más pequeñas pero aún clickeables */
-  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;         /* más pequeñas */
+  padding: 4px;              /* tamaño compacto */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;        /* círculo perfecto */
   cursor: pointer;
-  z-index: 50;            /* asegura que estén por encima de todo */
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   transition: background 0.25s ease, transform 0.2s ease;
 }
 
-/* Hover efecto */
+/* Hover */
 .gallery-arrow:hover {
   background: rgba(255, 255, 255, 0.5);
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Reposicionamiento: dentro del marco, sin ser cortadas */
+/* Posición más cerca del borde exterior */
 .left-arrow {
-  left: 8px;   /* visible dentro del marco */
+  left: -8px;
 }
 
 .right-arrow {
-  right: 8px;  /* visible dentro del marco */
+  right: -8px;
 }
 
+/* evita saltos de línea innecesarios en la descripción del portfolio */
+.portfolio-description {
+  white-space: normal;
+  max-width: 100%;
+}
+.portfolio-description span {
+  white-space: nowrap; /* mantiene frases completas en una sola línea */
+}
+
+      
     </style>
   </head>
   <body class="bg-obsidian text-ink font-sans antialiased">
@@ -616,11 +631,12 @@
     <div class="mx-auto max-w-7xl px-5">
       <div class="mb-8 text-center md:text-left">
         <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">Portfolio</h2>
-        <p class="mt-2 max-w-2xl text-white/80">
-          Selected projects — inline playback. Tap to play.<br>
-          <span class="text-white/70">For the best experience, adjust video quality to the highest resolution.</span><br>
-          <span class="text-white/70">In the HDR Photo section below, click inside the frame and scroll horizontally to explore the gallery.</span>
-        </p>
+<p class="mt-2 text-white/80 portfolio-description">
+  Selected projects — inline playback. Tap to play.<br>
+  <span class="text-white/70">For the best experience, adjust video quality to the highest resolution.</span><br>
+  <span class="text-white/70">In the HDR Photo section below, click inside the frame and scroll horizontally to explore the gallery.</span>
+</p>
+
       </div>
 
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
